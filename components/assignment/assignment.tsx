@@ -10,12 +10,13 @@ import Pending from "./pending";
 import Submitted from "./submitted";
 import Marked from "./marked";
 import Link from "next/link";
+import chat from "../../public/chat icon.png";
 
 const Assignment = () => {
   const [category, setCategory] = useState("pending");
 
   return (
-    <section className="">
+    <section className="relative">
       <div className="border-b border-[#D5E3FC] p-5">
         {/* user phone details */}
         <div className="flex justify-between items-center">
@@ -148,6 +149,16 @@ const Assignment = () => {
       ) : (
         <Marked />
       )}
+
+      <div className="absolute top-[75%] right-5">
+        <Image
+          className="h-[48px] w-[48px]"
+          src={chat}
+          alt="chat icon"
+          height={100}
+          width={100}
+        />
+      </div>
     </section>
   );
 };

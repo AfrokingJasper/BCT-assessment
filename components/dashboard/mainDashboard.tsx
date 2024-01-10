@@ -7,10 +7,11 @@ import wifi from "../../public/Wi–Fi.png";
 import battery from "../../public/Status Bar – Battery.png";
 import Image from "next/image";
 import DashboardItems from "./dashboardItems";
+import chat from "../../public/chat icon.png";
 
 const MainDashboard = () => {
   return (
-    <section>
+    <section className="relative">
       <div className="flex flex-col gap-3 bg-[#ECF1FB] p-3">
         {/* user phone details */}
         <div className="flex justify-between items-center">
@@ -103,6 +104,16 @@ const MainDashboard = () => {
 
       {/* items in dashboard */}
       <DashboardItems />
+
+      <div className="absolute top-[75%] right-5">
+        <Image
+          className="h-[48px] w-[48px]"
+          src={chat}
+          alt="chat icon"
+          height={100}
+          width={100}
+        />
+      </div>
     </section>
   );
 };
