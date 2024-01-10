@@ -9,6 +9,7 @@ import Image from "next/image";
 import Pending from "./pending";
 import Submitted from "./submitted";
 import Marked from "./marked";
+import Link from "next/link";
 
 const Assignment = () => {
   const [category, setCategory] = useState("pending");
@@ -56,7 +57,7 @@ const Assignment = () => {
         {/* profile and notification */}
         <div className="flex justify-between items-start mt-5">
           <div className="flex gap-3">
-            <div>
+            <Link href="/dashboard">
               <Image
                 className="h-[24px] w-[24px]"
                 src={arrow}
@@ -64,7 +65,7 @@ const Assignment = () => {
                 height={20}
                 width={20}
               />
-            </div>
+            </Link>
           </div>
           <div>
             <Image
